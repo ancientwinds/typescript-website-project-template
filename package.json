@@ -1,0 +1,85 @@
+{
+  "name": "myApp",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "FULLNAME",
+    "email": "FULLNAME@MAIL.com",
+    "url": ""
+  },
+  "files": [
+    "myApp"
+  ],
+  "main": "ps-incontact-search-ui/index.js",
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "install": "0.10.1",
+    "npm": "5.5.1",
+    "request": "^2.81.0",
+    "webpack-dev-server": "1.16.5"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "ejs": "^2.5.5",
+    "eslint": "^3.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-xo-space": "^0.15.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "event-stream": "^3.3.4",
+    "expand-brackets": "^2.1.4",
+    "express": "^4.14.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-dom": "^0.9.17",
+    "gulp-ejs": "^2.3.0",
+    "gulp-eol": "^0.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-streamify": "^1.0.2",
+    "gulp-strip-comments": "^2.4.3",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^3.2.0",
+    "merge-stream": "^1.0.1",
+    "pretty-typescript": "1.13.0",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "ts-loader": "^1.3.3",
+    "typescript": "^1.8.10",
+    "underscore": "^1.8.3",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-fail-plugin": "^1.0.5"
+  },
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp dev",
+    "deploy": "gulp bundle && gulp bundle-sfdc && gulp deploy-sfdc",
+    "test": "gulp"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "license": "Apache-2.0"
+}
