@@ -19,7 +19,7 @@ export class Index {
 
     if (navigator.onLine) {
       this.deviceIsOnline = true;
-      console.log('Internet Connection Available')
+      console.log('Internet Connection Available');
     } else {
       console.log('No Internet Connection');
     }
