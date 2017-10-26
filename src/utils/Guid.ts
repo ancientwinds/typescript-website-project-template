@@ -2,21 +2,12 @@ export class Guid {
   private _guid: string = '';
 
   constructor() {
-    let result: string;
-    let i: string;
-    let j: number;
-
-    result = '';
-    for (j = 0; j < 32; j++) {
-      if (j === 8 || j === 12 || j === 16 || j === 20) {
-        result = result + '-';
-      }
-
-      i = Math.floor(Math.random() * 16).toString(16).toUpperCase();
-      result = result + i;
-    }
-
-    this._guid = result;
+    let s4 = ()=>{
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    };
+    this._guid = [s4(), s4(), '-', s4(), '-', s4(), '-', s4(), '-', s4(), s4(), s4()].join('');
   }
 
   public toString(): string {
