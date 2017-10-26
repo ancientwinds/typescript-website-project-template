@@ -11,19 +11,18 @@ const runsequence = require('run-sequence');
 const minimize = process.argv.indexOf('--minimize') !== -1;
 const _ = require('underscore');
 
-var bannerMsg = minimize ? 'Building minified version' : 'Building non minified version';
+console.log(`Building minified version: ${minimize}`);
 
 requireDir('./gulpTasks');
 
 gulp.task('default', ['buildAll']);
 
 gulp.task('buildAll', function (done) {
-  runsequence('clean', ['css', 'setup'], 'prettify', 'compileAll', done);
+  runsequence('clean', ['css', 'setup'], 'compileAll', done);
 });
 
-gulp.task('build', function (done) {
-  console.log((bannerMsg + ' of the library [' + process.env.CUSTOM_BUNDLE + ' bundle]').bgGreen.red);
-  runsequence('clean', ['css', 'setup'], 'prettify', 'compile', done);
+gulp.task('format', function (done) {
+  runsequence('clean', 'prettify', done);
 });
 
 gulp.task('clean', function () {
