@@ -1,4 +1,5 @@
 import { Guid } from './utils/Guid';
+import '../sass/main.scss';
 
 export class Index {
   constructor() { }
@@ -29,7 +30,7 @@ export class Index {
 
   public render(): void {
     document.write(`
-        <div id"${this._guid}">
+        <div id="${this._guid}">
             <h1>Browser test</h1>
             <ul>
                 <li>
